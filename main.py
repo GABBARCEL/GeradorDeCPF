@@ -31,7 +31,6 @@ def GenCpf(randomCPF):
     if dv2 == 10:
         dv2 = 0
 
-    return CPFcomDv1 + [dv2]
-    
-cpf = GenCpf(seed)
-print(cpf)
+
+    CPF = ''.join(str(digito) for digito in (CPFcomDv1 + [dv2]))
+    return CPF
